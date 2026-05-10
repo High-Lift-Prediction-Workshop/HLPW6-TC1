@@ -1,4 +1,4 @@
-# High Lift Prediction Workshop 6 - Template Submission Files =TEST2=
+# High Lift Prediction Workshop 6 - Template Submission Files
 
 This folder contains four files participants are expected to modify and submit for Test Case 1:
 
@@ -16,12 +16,17 @@ Additionally, participants should revise the Readme.md (this file) within their 
 
 # Name(s) and Organization(s):
 Insert name(s) and corresponding organization(s) here
+Hidemasa Yasuda (KHI)
+Yuta Sawaki (KHI)
+Hiroyoshi Asano (KHI)
 
 ## Primary Email:  
 Insert point of contact (POC) email here
+yasuda_hidemasa@global.kawasaki.com
 
 ## Primary Phone:  
 Insert POC phone here
++81-58-382-5346
 
 ## Address:  
 Insert POC address here
@@ -30,6 +35,7 @@ Insert POC address here
 
 ## Solver Name and Version:
 Insert solver name and version here
+cflow-solv.5.10.12
 
 ## Basic Algorithm:  
 Insert relevant details about algorithm here
