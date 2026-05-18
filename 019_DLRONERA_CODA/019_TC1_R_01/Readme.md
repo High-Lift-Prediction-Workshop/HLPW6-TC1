@@ -35,6 +35,7 @@ Spalart-Allamaras Turbulence model
 
 ## Convergence Criteria:
 8 orders of residual reduction in Density and Turbulence residual compared to the free-stream residual
+
 All reported resdiual convergence histories are normalized by the free-stream residual
 
 # Test Case 1 GRID & SOLUTION INFO (CRM-HLS)
