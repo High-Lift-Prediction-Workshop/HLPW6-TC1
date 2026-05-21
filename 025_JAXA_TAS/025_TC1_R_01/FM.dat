@@ -1,0 +1,60 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#   HLPW-6 Force/Moment vs. Alpha DATA SUBMITTAL FORM for Test Case 1, March 3rd 2026, RevNew
+#   Author: DJH, adapted from HLPW-5 submission files
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#        The next four variables are optional, dependent on solver capability to output
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 30 inches
+#                MRC:   x = 34.8082 inches, y = 0.0 inches, z = 0 inches
+#
+#                XXX:   Participant ID (assigned by HLPW committee); e.g., 001, 020, 147
+#                TFG:   TFG the submission should fall under (e.g. R, S, A, H)
+#            DATASET:   Sequential number, should start at 01 for each participant and TFG
+
+#    E.g. TITLE field could be: 001_TC1_S_20 for the 20th submission by participant 1 to the scale resolving TFG
+#
+#    FLOW CONDITIONS:
+#            Angles of Attack: 10, 15, 20, 25, 30, 35 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 3.55 million (based on MAC)
+#             Freestream Temp: 518.67 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "025_TC1_R_01"
+#                                                           <----- Optional ----->
+VARIABLES = "ALPHA" "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
+
+ZONE T="025 TC1, NOMINAL GRID R.1.TC1.03 C LEVEL"
+10.0	  75726976	1.24586904	0.15485893	-0.11565652	-999	-999	-999	1.24586046	8.53e-06	0.14621991	0.00863901
+15.0	  75726976	1.55315602	0.21471983	-0.08298429	-999	-999	-999	1.55325425	-9.814e-05	0.20578447	0.00893535
+20.0	  75726976	1.86308002	0.29204169	-0.07383992	-999	-999	-999	1.86336637	-0.00028628	0.28288236	0.00915933
+25.0	  75726976	2.12495232	0.3726517	-0.05828827	-999	-999	-999	2.12537289	-0.00042071	0.36360317	0.00904853
+30.0	  75726976	2.29133058	0.44444263	-0.02638572	-999	-999	-999	2.2918129	-0.00048217	0.43607676	0.00836588
+31.0	  75726976	2.31206274	0.45809692	-0.01731268	-999	-999	-999	2.31253433	-0.00047166	0.4499433	0.00815362
+32.0	  75726976	2.32082009	0.46970165	-0.01167961	-999	-999	-999	2.32127976	-0.0004595	0.4618035	0.00789815
+33.0	  75726976	2.34035325	0.48476347	-0.0031826	-999	-999	-999	2.34083438	-0.00048097	0.47706786	0.0076956
+34.0	  75726976	2.07310963	0.53083307	-0.02804625	-999	-999	-999	2.07391691	-0.00080723	0.52382791	0.00700516
+35.0	  75726976	1.64366555	0.6005733	0.09418876	-999	-999	-999	1.64523828	-0.00157272	0.59526139	0.00531191
+
