@@ -1,0 +1,116 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+#   HLPW-6 Force/Moment Grid Convergence DATA SUBMITTAL FORM for Test Case 1, March 3rd 2026, RevNew
+#   Author: DJH, adapted from HLPW-5 submission files
+#
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#        The next four variables are optional, dependent on solver capability to output
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 30 inches
+#                MRC:   x = 34.8082 inches, y = 0.0 inches, z = 0 inches
+#
+#                XXX:   Participant ID (assigned by HLPW committee); e.g., 001, 020, 147
+#                TFG:   TFG the submission should fall under (e.g. R, S, A, H)
+#            DATASET:   Sequential number, should start at 01 for each participant and TFG
+
+#    E.g. TITLE field could be: 001_TC1_S_20 for the 20th submission by participant 1 to the scale resolving TFG
+#
+#    FLOW CONDITIONS:
+#            Angles of Attack: 10, 15, 20, 25, 30, 35 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 3.55 million (based on MAC)
+#             Freestream Temp: 518.67 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "013_TC1_S_01"
+
+#                                                   <------ Optional ----->
+VARIABLES = "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
+
+# The following section is for AoA = 10 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 10<math>0<\math>, grid convergence"
+  495105676   1.32017706e+00 1.68667051e-01 -1.23983775e-01   2.32350958e-05 1.65000000e+02 3.50000000e+01   1.32108323e+00 -9.06173014e-04 1.59839972e-01 8.82707933e-03
+  230230980   1.31419207e+00 1.70686044e-01 -1.24619767e-01   4.84428306e-05 1.15000000e+02 3.50000000e+01   1.31513149e+00 -9.39422448e-04 1.62231790e-01 8.45425395e-03
+  59810304   1.19312938e+00 1.52050488e-01 -1.05472896e-01   9.71599427e-05 6.50000000e+01 3.50000000e+01   1.19389023e+00 -7.60847132e-04 1.44756738e-01 7.29375019e-03
+
+# The following section is for AoA = 15 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 15<math>0<\math>, grid convergence"
+  494359809   1.64169723e+00 2.36532254e-01 -9.68456207e-02   2.31330340e-05 1.65000000e+02 1.30400000e+01   1.64320946e+00 -1.51223028e-03 2.27402009e-01 9.13024414e-03
+  230241512   1.63210382e+00 2.39368808e-01 -9.48156558e-02   4.77826971e-05 1.15000000e+02 3.50000000e+01   1.63360094e+00 -1.49711998e-03 2.30635906e-01 8.73290171e-03
+  59819864   1.48435141e+00 2.12251524e-01 -7.03438399e-02   9.71744892e-05 6.50000000e+01 3.50000000e+01   1.48557552e+00 -1.22411173e-03 2.05000113e-01 7.25141035e-03
+
+# The following section is for AoA = 20 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 20<math>0<\math>, grid convergence"
+  496739876   1.94891156e+00 3.16890197e-01 -6.96480237e-02   2.28759098e-05 1.65000000e+02 1.30800000e+01   1.95109428e+00 -2.18272402e-03 3.07830482e-01 9.05971514e-03
+  230254439   1.93215706e+00 3.19879975e-01 -6.50329693e-02   4.74827647e-05 1.15000000e+02 3.50000000e+01   1.93431975e+00 -2.16269594e-03 3.11548887e-01 8.33108737e-03
+  59833114   1.76635378e+00 2.85180780e-01 -3.57306073e-02   9.54026312e-05 6.50000000e+01 3.50000000e+01   1.76811749e+00 -1.76371485e-03 2.78780421e-01 6.40035875e-03
+
+# The following section is for AoA = 25 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 25<math>0<\math>, grid convergence"
+  494218094   2.21916078e+00 4.02646561e-01 -3.94575869e-02   2.28983639e-05 1.65000000e+02 2.32100000e+01   2.22190576e+00 -2.74497992e-03 3.94163957e-01 8.48260320e-03
+  230270182   2.16336849e+00 3.99648722e-01 -2.29837728e-02   4.73031317e-05 1.15000000e+02 3.50000000e+01   2.16602175e+00 -2.65326542e-03 3.91872601e-01 7.77612122e-03
+  59860480   1.95050281e+00 3.57581352e-01 2.20255185e-02   9.63790348e-05 6.50000000e+01 3.50000000e+01   1.95239664e+00 -1.89382965e-03 3.52197131e-01 5.38422040e-03
+
+# The following section is for AoA = 30 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 30<math>0<\math>, grid convergence"
+  740786376   2.41497806e+00 4.83929848e-01 -3.67799582e-03   2.11521234e-05 1.65000000e+02 2.55200000e+01   2.41795918e+00 -2.98111329e-03 4.75766849e-01 8.16299894e-03
+  230214309   2.17749671e+00 4.44769526e-01 6.35736138e-02   4.68832041e-05 1.15000000e+02 3.50000000e+01   2.18010104e+00 -2.60432292e-03 4.38034483e-01 6.73504340e-03
+  59810304   1.82289090e+00 4.48243698e-01 9.80723196e-02   9.66632794e-05 6.50000000e+01 3.50000000e+01   1.82455262e+00 -1.66172040e-03 4.44273448e-01 3.97024983e-03
+
+# The following section is for AoA = 33 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 33<math>0<\math>, grid convergence"
+  740207364   2.45785011e+00 5.18071621e-01 3.02341800e-02   2.07258067e-05 1.65000000e+02 1.66800000e+01   2.46077380e+00 -2.92368165e-03 5.10071379e-01 8.00024209e-03
+  230164173   1.99594861e+00 5.07845138e-01 9.02176571e-02   4.69236508e-05 1.15000000e+02 3.50000000e+01   1.99842530e+00 -2.47668438e-03 5.02145909e-01 5.69922888e-03
+  59810502   1.66502469e+00 5.24796360e-01 1.12563781e-01   9.68156785e-05 6.50000000e+01 3.50000000e+01   1.66659082e+00 -1.56612921e-03 5.21329825e-01 3.46653554e-03
+
+# The following section is for AoA = 34 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 34<math>0<\math>, grid convergence"
+  741128819   2.45369948e+00 5.25795530e-01 4.80334591e-02   2.06655721e-05 1.65000000e+02 1.59100000e+01   2.45661982e+00 -2.92034281e-03 5.18008298e-01 7.78723145e-03
+  230160880   1.92950543e+00 5.23564575e-01 1.06245066e-01   4.68428798e-05 1.15000000e+02 3.50000000e+01   1.93196386e+00 -2.45842514e-03 5.18155764e-01 5.40881100e-03
+  59810702   1.62386050e+00 5.56247687e-01 1.17604881e-01   9.71616735e-05 6.50000000e+01 3.50000000e+01   1.62539952e+00 -1.53901646e-03 5.52940858e-01 3.30682885e-03
+
+# The following section is for AoA = 35 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 35<math>0<\math>, grid convergence"
+  741711503   2.41845160e+00 5.34313752e-01 6.61018854e-02   2.06442888e-05 1.65000000e+02 2.39900000e+01   2.42128404e+00 -2.83244259e-03 5.26791249e-01 7.52250282e-03
+  230154955   1.90062127e+00 5.46763261e-01 1.39124468e-01   4.65210257e-05 1.15000000e+02 3.50000000e+01   1.90289288e+00 -2.27161889e-03 5.41901513e-01 4.86174764e-03
+  59812500   1.56393013e+00 5.86266713e-01 1.21877940e-01   9.74846851e-05 6.50000000e+01 3.50000000e+01   1.56546209e+00 -1.53196122e-03 5.83072630e-01 3.19408291e-03
+
+# The following section is for AoA = 36 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 36<math>0<\math>, grid convergence"
+  741571748   2.36444113e+00 5.53615298e-01 7.22984613e-02   2.06509635e-05 1.65000000e+02 2.69300000e+01   2.36718816e+00 -2.74703386e-03 5.46491029e-01 7.12426834e-03
+  230152275   1.84070532e+00 5.74661398e-01 1.47287746e-01   4.65610607e-05 1.15000000e+02 3.50000000e+01   1.84294514e+00 -2.23981558e-03 5.70048859e-01 4.61253958e-03
+  59812394   1.44580236e+00 5.91184441e-01 1.00393416e-01   9.82516163e-05 6.50000000e+01 3.50000000e+01   1.44732099e+00 -1.51862536e-03 5.88087592e-01 3.09684925e-03
+
+# The following section is for AoA = 37 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 37<math>0<\math>, grid convergence"
+  741531547   2.10581733e+00 5.99489467e-01 9.45875067e-02   2.09894779e-05 1.75000000e+02 1.60400000e+01   2.10871946e+00 -2.90212851e-03 5.93211893e-01 6.27757449e-03
+  230156828   1.73999756e+00 6.09007347e-01 1.44933257e-01   4.68121570e-05 1.15000000e+02 3.50000000e+01   1.74224586e+00 -2.24829969e-03 6.04588533e-01 4.41881376e-03
+  59811723   1.36345710e+00 6.15285605e-01 7.60012700e-02   9.89837682e-05 6.50000000e+01 3.50000000e+01   1.36498664e+00 -1.52954211e-03 6.12229478e-01 3.05612629e-03
+
+# The following section is for AoA = 38 deg:
+ZONE T="013 TC1 <greek>a<\greek> = 38<math>0<\math>, grid convergence"
+  742686548   2.08342095e+00 6.23829868e-01 1.09836022e-01   2.11078534e-05 1.75000000e+02 1.16900000e+01   2.08624996e+00 -2.82901227e-03 6.17827932e-01 6.00193600e-03
+  230160897   1.64706693e+00 6.35305937e-01 1.38985459e-01   4.69181075e-05 1.15000000e+02 3.50000000e+01   1.64937254e+00 -2.30561163e-03 6.30985851e-01 4.32008581e-03
+  59811936   1.30491856e+00 6.42373964e-01 5.40284598e-02   9.96005171e-05 6.50000000e+01 3.50000000e+01   1.30646163e+00 -1.54307346e-03 6.39379508e-01 2.99445535e-03
