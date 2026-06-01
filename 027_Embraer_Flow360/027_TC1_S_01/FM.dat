@@ -1,0 +1,59 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#   HLPW-6 Force/Moment vs. Alpha DATA SUBMITTAL FORM for Test Case 1, March 3rd 2026, RevNew
+#   Author: DJH, adapted from HLPW-5 submission files
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#        The next four variables are optional, dependent on solver capability to output
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 30 inches
+#                MRC:   x = 34.8082 inches, y = 0.0 inches, z = 0 inches
+#
+#                XXX:   Participant ID (assigned by HLPW committee); e.g., 001, 020, 147
+#                TFG:   TFG the submission should fall under (e.g. R, S, A, H)
+#            DATASET:   Sequential number, should start at 01 for each participant and TFG
+
+#    E.g. TITLE field could be: 001_TC1_S_20 for the 20th submission by participant 1 to the scale resolving TFG
+#
+#    FLOW CONDITIONS:
+#            Angles of Attack: 10, 15, 20, 25, 30, 35 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 3.55 million (based on MAC)
+#             Freestream Temp: 518.67 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "033_TC1_S_001"
+#                                                           <----- Optional ----->
+VARIABLES = "ALPHA" "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
+
+# Include one zone for each grid in the family that you are reporting (label them appropriately by
+# changing, e.g., "NAMED GRID 1" to a description of the grid used (such as "GRID 2.R.02 R LEVEL")
+# and include the word NOMINAL next to the result you feel is "best")
+
+ZONE T="033 TC1, Flow360 Embraer Grid 1"
+10.000 71818925 1.21869 0.14648 -0.10679  2.93867e-05 20.0 10.0 1.21864   0.00005 0.13797 0.00855
+15.000 71818925 1.52472 0.20607 -0.07474  2.93867e-05 20.0 10.0 1.52475  -0.00002 0.19724 0.00883     
+20.000 71818925 1.83255 0.28201 -0.05710  2.93867e-05 20.0 10.0 1.83274  -0.00020 0.27288 0.00913 
+25.000 71818925 2.10127 0.36571 -0.04756  2.93867e-05 20.0 10.0 2.10159  -0.00033 0.35671 0.00901 
+30.000 71818925 2.27443 0.43878 -0.01735  2.93867e-05 20.0 10.0 2.27482  -0.00039 0.43044 0.00834 
+35.000 71818925 1.43475 0.64180  0.03769  2.93867e-05 20.0 10.0 1.43578  -0.00103 0.63817 0.00364 
