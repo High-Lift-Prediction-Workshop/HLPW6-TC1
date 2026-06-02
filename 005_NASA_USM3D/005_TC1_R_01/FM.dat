@@ -1,0 +1,95 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#   HLPW-6 Force/Moment vs. Alpha DATA SUBMITTAL FORM for Test Case 1, March 3rd 2026, RevNew
+#   Author: DJH, adapted from HLPW-5 submission files
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#        The next four variables are optional, dependent on solver capability to output
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 30 inches
+#                MRC:   x = 34.8082 inches, y = 0.0 inches, z = 0 inches
+#
+#                005:   Participant ID (assigned by HLPW committee); e.g., 001, 020, 147
+#                TFG:   TFG the submission should fall under (e.g. R, S, A, H)
+#            DATASET:   Sequential number, should start at 01 for each participant and TFG
+
+#    E.g. TITLE field could be: 001_TC1_S_20 for the 20th submission by participant 1 to the scale resolving TFG
+#
+#    FLOW CONDITIONS:
+#            Angles of Attack: 10, 15, 20, 25, 30, 35 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 3.55 million (based on MAC)
+#             Freestream Temp: 518.67 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "005_TC1_R_01"
+#                                                           <----- Optional ----->
+VARIABLES = "ALPHA" "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
+
+# Include one zone for each grid in the family that you are reporting (label them appropriately by
+# changing, e.g., "NAMED GRID 1" to a description of the grid used (such as "GRID 2.R.02 R LEVEL")
+# and include the word NOMINAL next to the result you feel is "best")
+
+
+ZONE T="005 TC1 R.1.TC1.02 HL6_RANS_4a "
+        10.0      4188184     1.220244     0.155007    -0.103871   -999   -999   -999   -999   -999     0.146492     0.008515   -999   -999   -999  
+        15.0      4188184     1.533979     0.216122    -0.074899   -999   -999   -999   -999   -999     0.207195     0.008927   -999   -999   -999  
+        20.0      4188184     1.844494     0.294044    -0.062623   -999   -999   -999   -999   -999     0.284913     0.009131   -999   -999   -999  
+        25.0      4188184     1.812602     0.384401    -0.028209   -999   -999   -999   -999   -999     0.376300     0.008101   -999   -999   -999  
+        30.0      4188184     1.988368     0.476498    -0.022875   -999   -999   -999   -999   -999     0.468948     0.007550   -999   -999   -999  
+        35.0      4188184     1.684533     0.616755     0.106493   -999   -999   -999   -999   -999     0.611343     0.005412   -999   -999   -999  
+ZONE T="005 TC1 R.1.TC1.02 HL6_RANS_4b "
+        10.0      7184160     1.232258     0.155925    -0.107525   -999   -999   -999   -999   -999     0.147292     0.008633   -999   -999   -999  
+        15.0      7184160     1.541378     0.216363    -0.076478   -999   -999   -999   -999   -999     0.207360     0.009003   -999   -999   -999  
+        20.0      7184160     1.853066     0.293729    -0.065918   -999   -999   -999   -999   -999     0.284495     0.009234   -999   -999   -999  
+        25.0      7184160     1.913033     0.390943    -0.005664   -999   -999   -999   -999   -999     0.382782     0.008161   -999   -999   -999  
+        30.0      7184160     1.996151     0.476590    -0.027901   -999   -999   -999   -999   -999     0.468912     0.007678   -999   -999   -999  
+        35.0      7184160     1.670357     0.618854     0.111260   -999   -999   -999   -999   -999     0.613483     0.005371   -999   -999   -999  
+ZONE T="005 TC1 R.1.TC1.02 HL6_RANS_4c "
+        10.0     16534903     1.240036     0.156058    -0.109797   -999   -999   -999   -999   -999     0.147368     0.008690   -999   -999   -999  
+        15.0     16534903     1.551128     0.216104    -0.079797   -999   -999   -999   -999   -999     0.207018     0.009086   -999   -999   -999  
+        20.0     16534903     1.863943     0.293778    -0.069979   -999   -999   -999   -999   -999     0.284455     0.009323   -999   -999   -999  
+        25.0     16534903     2.139608     0.379705    -0.059931   -999   -999   -999   -999   -999     0.370490     0.009215   -999   -999   -999  
+        30.0     16534903     1.997242     0.474116    -0.027249   -999   -999   -999   -999   -999     0.466283     0.007833   -999   -999   -999  
+        35.0     16534903     1.682097     0.620075     0.111600   -999   -999   -999   -999   -999     0.614613     0.005462   -999   -999   -999  
+ZONE T="005 TC1 R.1.TC1.02 HL6_RANS_4d "
+        10.0     34012510     1.243608     0.155847    -0.111323   -999   -999   -999   -999   -999     0.147140     0.008707   -999   -999   -999  
+        15.0     34012510     1.556488     0.216166    -0.081310   -999   -999   -999   -999   -999     0.207044     0.009122   -999   -999   -999  
+        20.0     34012510     1.868346     0.293243    -0.070632   -999   -999   -999   -999   -999     0.283893     0.009350   -999   -999   -999  
+        25.0     34012510     2.144717     0.378717    -0.060310   -999   -999   -999   -999   -999     0.369439     0.009278   -999   -999   -999  
+        30.0     34012510     2.002899     0.473680    -0.027301   -999   -999   -999   -999   -999     0.465764     0.007916   -999   -999   -999  
+        35.0     34012510     1.661511     0.611001     0.108769   -999   -999   -999   -999   -999     0.605508     0.005493   -999   -999   -999  
+ZONE T="005 TC1 R.1.TC1.02 HL6_RANS_4e "
+        10.0    101719720     1.244466     0.155887    -0.111769   -999   -999   -999   -999   -999     0.147189     0.008698   -999   -999   -999  
+        15.0    101719720     1.557683     0.216083    -0.081788   -999   -999   -999   -999   -999     0.206966     0.009117   -999   -999   -999  
+        20.0    101719720     1.867813     0.292609    -0.070714   -999   -999   -999   -999   -999     0.283261     0.009348   -999   -999   -999  
+        25.0    101719720     2.142839     0.377127    -0.060209   -999   -999   -999   -999   -999     0.367831     0.009296   -999   -999   -999  
+        30.0    101719720     1.990576     0.467452    -0.027964   -999   -999   -999   -999   -999     0.459554     0.007898   -999   -999   -999  
+        35.0    101719720     1.661957     0.609341     0.102433   -999   -999   -999   -999   -999     0.603789     0.005552   -999   -999   -999  
+ZONE T="005 TC1 NOMINAL R.1.TC1.02 HL6_RANS_4f "
+        10.0    323271646     1.243144     0.155344    -0.111250   -999   -999   -999   -999   -999     0.146703     0.008641   -999   -999   -999  
+        15.0    323271646     1.557398     0.215936    -0.082113   -999   -999   -999   -999   -999     0.206839     0.009097   -999   -999   -999  
+        20.0    323271646     1.866838     0.292239    -0.070549   -999   -999   -999   -999   -999     0.282925     0.009314   -999   -999   -999  
+        25.0    323271646     2.140012     0.375933    -0.059666   -999   -999   -999   -999   -999     0.366658     0.009275   -999   -999   -999  
+        30.0    323271646     2.091505     0.468838     0.016997   -999   -999   -999   -999   -999     0.461000     0.007838   -999   -999   -999  
+        35.0    323271646     1.653428     0.608758     0.093938   -999   -999   -999   -999   -999     0.603236     0.005522   -999   -999   -999  
