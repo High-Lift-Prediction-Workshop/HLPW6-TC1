@@ -1,0 +1,99 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#   HLPW-6 Force/Moment vs. Alpha DATA SUBMITTAL FORM for Test Case 1, March 3rd 2026, RevNew
+#   Author: DJH, adapted from HLPW-5 submission files
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#        The next four variables are optional, dependent on solver capability to output
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 30 inches
+#                MRC:   x = 34.8082 inches, y = 0.0 inches, z = 0 inches
+#
+#                XXX:   Participant ID (assigned by HLPW committee); e.g., 001, 020, 147
+#                TFG:   TFG the submission should fall under (e.g. R, S, A, H)
+#            DATASET:   Sequential number, should start at 01 for each participant and TFG
+#
+#    E.g. TITLE field could be: 001_TC1_S_20 for the 20th submission by participant 1 to the scale resolving TFG
+#
+#    FLOW CONDITIONS:
+#            Angles of Attack: 10, 15, 20, 25, 30, 35 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 3.55 million (based on MAC)
+#             Freestream Temp: 518.67 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "016_TC1_R_01"
+#                                                           <----- Optional ----->
+VARIABLES = "ALPHA" "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
+
+# Include one zone for each grid in the family that you are reporting (label them appropriately by
+# changing, e.g., "NAMED GRID 1" to a description of the grid used (such as "GRID 2.R.02 R LEVEL")
+# and include the word NOMINAL next to the result you feel is "best")
+
+ZONE T="016 TC1, Grid R.1.TC1.01 A Level"
+10.0 2661338 0.1210058E+01 0.1520363E+00 -0.1020936E+00 -999 -999 -999 0.1209907E+01 0.1506300E-03 0.1441695E+00 0.7866825E-02
+15.0 2661338 0.1519081E+01 0.2128827E+00 -0.7712381E-01 -999 -999 -999 0.1519078E+01 0.3308417E-05 0.2043979E+00 0.8484772E-02
+20.0 2661338 0.1798545E+01 0.2843240E+00 -0.5345219E-01 -999 -999 -999 0.1798635E+01 -0.9060349E-04 0.2757663E+00 0.8557627E-02
+25.0 2661338 0.1887590E+01 0.3541678E+00 0.3589514E-01 -999 -999 -999 0.1887589E+01 0.1689018E-05 0.3467038E+00 0.7463961E-02
+30.0 2661338 0.2135887E+01 0.4404974E+00 0.2299538E-01 -999 -999 -999 0.2136028E+01 -0.1408076E-03 0.4330619E+00 0.7435437E-02
+35.0 2661338 0.1606616E+01 0.5960865E+00 0.7172402E-01 -999 -999 -999 0.1608625E+01 -0.2008841E-02 0.5906366E+00 0.5449888E-02
+
+ZONE T="016 TC1, Grid R.1.TC1.01 B Level"
+10.0 5730017 0.1227958E+01 0.1537458E+00 -0.1061067E+00 -999 -999 -999 0.1227885E+01 0.7293710E-04 0.1453713E+00 0.8374508E-02
+15.0 5730017 0.1532411E+01 0.2130148E+00 -0.7896784E-01 -999 -999 -999 0.1532475E+01 -0.6438639E-04 0.2041658E+00 0.8849031E-02
+20.0 5730017 0.1818509E+01 0.2843305E+00 -0.5705062E-01 -999 -999 -999 0.1818692E+01 -0.1826659E-03 0.2753978E+00 0.8932726E-02
+25.0 5730017 0.1970366E+01 0.3774943E+00 -0.1771932E-01 -999 -999 -999 0.1970438E+01 -0.7213805E-04 0.3695533E+00 0.7941043E-02
+30.0 5730017 0.2143659E+01 0.4621073E+00 0.2145689E-01 -999 -999 -999 0.2143757E+01 -0.9743948E-04 0.4549442E+00 0.7163144E-02
+35.0 5730017 0.1610086E+01 0.6138852E+00 0.8433113E-01 -999 -999 -999 0.1612023E+01 -0.1936680E-02 0.6086000E+00 0.5285228E-02
+
+ZONE T="016 TC1, Grid R.1.TC1.01 C Level"
+10.0 17156245 0.1231830E+01 0.1528022E+00 -0.1081294E+00 -999 -999 -999 0.1231790E+01 0.4031577E-04 0.1440737E+00 0.8728543E-02
+15.0 17156245 0.1429964E+01 0.2256128E+00 -0.5406457E-01 -999 -999 -999 0.1430008E+01 -0.4337938E-04 0.2174591E+00 0.8153646E-02
+20.0 17156245 0.1692807E+01 0.2946220E+00 -0.2131555E-01 -999 -999 -999 0.1692927E+01 -0.1202299E-03 0.2864788E+00 0.8143293E-02
+25.0 17156245 0.1874065E+01 0.3822126E+00 0.6454257E-03 -999 -999 -999 0.1874391E+01 -0.3261595E-03 0.3741473E+00 0.8065278E-02
+30.0 17156245 0.1987481E+01 0.4481245E+00 0.6488580E-01 -999 -999 -999 0.1987915E+01 -0.4347913E-03 0.4407071E+00 0.7417412E-02
+35.0 17156245 0.1436292E+01 0.5977668E+00 0.9442118E-01 -999 -999 -999 0.1438093E+01 -0.1800609E-02 0.5932251E+00 0.4541719E-02
+
+ZONE T="016 TC1, Grid R.1.TC1.01 D Level"
+10.0 38396609 0.1234214E+01 0.1525918E+00 -0.1093600E+00 -999 -999 -999 0.1234178E+01 0.3528576E-04 0.1437255E+00 0.8866249E-02
+15.0 38396609 0.1380432E+01 0.2259521E+00 -0.4012179E-01 -999 -999 -999 0.1380495E+01 -0.6316737E-04 0.2177421E+00 0.8209917E-02
+20.0 38396609 0.1637772E+01 0.3000854E+00 -0.1462134E-01 -999 -999 -999 0.1637955E+01 -0.1829355E-03 0.2918465E+00 0.8238966E-02
+25.0 38396609 0.1874013E+01 0.3763457E+00 0.1260358E-01 -999 -999 -999 0.1874390E+01 -0.3773113E-03 0.3681590E+00 0.8186790E-02
+30.0 38396609 0.2045867E+01 0.4577228E+00 0.4864594E-01 -999 -999 -999 0.2046129E+01 -0.2624025E-03 0.4504525E+00 0.7270301E-02
+35.0 38396609 0.1259176E+01 0.5853184E+00 -0.5901659E-02 -999 -999 -999 0.1260732E+01 -0.1556944E-02 0.5817243E+00 0.3594046E-02
+
+ZONE T="016 TC1, Grid R.1.TC1.01 E Level"
+10.0 121556748 0.1225838E+01 0.1507001E+00 -0.1074814E+00 -999 -999 -999 0.1225771E+01 0.6716218E-04 0.1417903E+00 0.8909849E-02
+15.0 121556748 0.1383508E+01 0.2261676E+00 -0.4213888E-01 -999 -999 -999 0.1383573E+01 -0.6539773E-04 0.2178540E+00 0.8313594E-02
+20.0 121556748 0.1635069E+01 0.3002916E+00 -0.1384252E-01 -999 -999 -999 0.1635230E+01 -0.1605712E-03 0.2920336E+00 0.8258042E-02
+25.0 121556748 0.1848984E+01 0.3709071E+00 0.1806165E-01 -999 -999 -999 0.1849386E+01 -0.4019851E-03 0.3626185E+00 0.8288518E-02
+30.0 121556748 0.2035901E+01 0.4541241E+00 0.4374077E-01 -999 -999 -999 0.2036205E+01 -0.3037429E-03 0.4466462E+00 0.7477913E-02
+35.0 121556748 0.1447395E+01 0.6039852E+00 0.9369946E-01 -999 -999 -999 0.1448946E+01 -0.1550980E-02 0.5995425E+00 0.4442709E-02
+
+ZONE T="016 TC1, Grid R.1.TC1.01 F Level"
+10.0 279592033 0.1220105E+01 0.1506628E+00 -0.1051784E+00 -999 -999 -999 0.1220017E+01 0.8819424E-04 0.1418100E+00 0.8852842E-02
+15.0 279592033 0.1369623E+01 0.2248762E+00 -0.3231875E-01 -999 -999 -999 0.1369683E+01 -0.6008747E-04 0.2165494E+00 0.8326857E-02
+20.0 279592033 0.1622585E+01 0.2987303E+00 -0.6391469E-02 -999 -999 -999 0.1622732E+01 -0.1472488E-03 0.2904972E+00 0.8233150E-02
+25.0 279592033 0.1849220E+01 0.3706658E+00 0.1989189E-01 -999 -999 -999 0.1849600E+01 -0.3800067E-03 0.3623734E+00 0.8292390E-02
+30.0 279592033 0.2031764E+01 0.4541553E+00 0.4079323E-01 -999 -999 -999 0.2032086E+01 -0.3218954E-03 0.4465881E+00 0.7567249E-02
+35.0 279592033 0.1469037E+01 0.6079083E+00 0.9183933E-01 -999 -999 -999 0.1470528E+01 -0.1491137E-02 0.6034383E+00 0.4469910E-02
