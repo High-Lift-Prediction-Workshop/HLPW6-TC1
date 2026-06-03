@@ -14,6 +14,6 @@ Where:
 
 # Submission Key
 
-011_TC1_S_01 BFM-v1 Level 11 Grid
+011_TC1_S_01 -- BFM-v1 Level 11 Grid
 
-011_TC1_S_02 Vreman+EQWM Level 11 Grid
+011_TC1_S_02 -- Vreman+EQWM Level 11 Grid
