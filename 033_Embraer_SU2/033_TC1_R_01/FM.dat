@@ -1,0 +1,93 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#   HLPW-6 Force/Moment vs. Alpha DATA SUBMITTAL FORM for Test Case 1, March 3rd 2026, RevNew
+#   Author: DJH, adapted from HLPW-5 submission files
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#        The next four variables are optional, dependent on solver capability to output
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 30 inches
+#                MRC:   x = 34.8082 inches, y = 0.0 inches, z = 0 inches
+#
+#                XXX:   Participant ID (assigned by HLPW committee); e.g., 001, 020, 147
+#                TFG:   TFG the submission should fall under (e.g. R, S, A, H)
+#            DATASET:   Sequential number, should start at 01 for each participant and TFG
+
+#    E.g. TITLE field could be: 001_TC1_S_20 for the 20th submission by participant 1 to the scale resolving TFG
+#
+#    FLOW CONDITIONS:
+#            Angles of Attack: 10, 15, 20, 25, 30, 35 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 3.55 million (based on MAC)
+#             Freestream Temp: 518.67 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "033_TC1_R_01"
+#                                                           <----- Optional ----->
+VARIABLES = "ALPHA" "N" "CD" "CL" "CM" "DT" "TSTART" "TAVG" "CLp" "CDp" "CLv" "CDv"
+
+ZONE T="033 TC1, HeldenMesh GRID 3d"
+    10.000  18023391 0.15420  1.24979  -0.11005  -999 -999 -999 -999 -999 -999 -999
+    15.000  18023391 0.21668  1.56435  -0.08417  -999 -999 -999 -999 -999 -999 -999
+    20.000  18023391 0.29402  1.87192  -0.06961  -999 -999 -999 -999 -999 -999 -999
+    25.000  18023391 0.38526  2.01670  -0.02760  -999 -999 -999 -999 -999 -999 -999
+    27.500  18023391 0.42908  2.01760   0.01604  -999 -999 -999 -999 -999 -999 -999
+    30.000  18023391 0.47181  2.10642   0.02695  -999 -999 -999 -999 -999 -999 -999
+    32.500  18023391 0.51395  2.15722   0.03738  -999 -999 -999 -999 -999 -999 -999
+    35.000  18023391 0.59415  2.01752   0.12728  -999 -999 -999 -999 -999 -999 -999
+ZONE T="033 TC1, HeldenMesh GRID 3e"
+    10.000  57968323 0.15388  1.24559  -0.11152  -999 -999 -999 -999 -999 -999 -999
+    15.000  57968323 0.21711  1.56859  -0.08579  -999 -999 -999 -999 -999 -999 -999
+    20.000  57968323 0.29364  1.87955  -0.07170  -999 -999 -999 -999 -999 -999 -999
+    25.000  57968323 0.38025  2.15872  -0.06220  -999 -999 -999 -999 -999 -999 -999
+    27.500  57968323 0.42210  2.26660  -0.05239  -999 -999 -999 -999 -999 -999 -999
+    30.000  57968323 0.45493  2.32228  -0.02415  -999 -999 -999 -999 -999 -999 -999
+    32.500  57968323 0.49886  2.24171   0.01448  -999 -999 -999 -999 -999 -999 -999
+    35.000  57968323 0.54481  2.24193   0.03486  -999 -999 -999 -999 -999 -999 -999
+ZONE T="033 TC1, Pointwise GRID B" 
+    10.000  28289287 0.15052  1.23539  -0.10926  -999 -999 -999 -999 -999 -999 -999
+    15.000  28289287 0.21297  1.55213  -0.08309  -999 -999 -999 -999 -999 -999 -999
+    20.000  28289287 0.28862  1.85726  -0.07096  -999 -999 -999 -999 -999 -999 -999
+    25.000  28289287 0.37099  2.12714  -0.05838  -999 -999 -999 -999 -999 -999 -999
+    27.500  28289287 0.41051  2.23211  -0.04690  -999 -999 -999 -999 -999 -999 -999
+    30.000  28289287 0.44526  2.29864  -0.02788  -999 -999 -999 -999 -999 -999 -999
+    32.500  28289287 0.47820  2.31956  -0.00681  -999 -999 -999 -999 -999 -999 -999
+    35.000  28289287 0.59680  1.87712   0.00543  -999 -999 -999 -999 -999 -999 -999
+ZONE T="033 TC1, Pointwise GRID C" 
+    10.000  75726976 0.15114  1.23805  -0.11014  -999 -999 -999 -999 -999 -999 -999
+    15.000  75726976 0.21395  1.55593  -0.08383  -999 -999 -999 -999 -999 -999 -999
+    20.000  75726976 0.28868  1.85901  -0.06902  -999 -999 -999 -999 -999 -999 -999
+    25.000  75726976 0.37212  2.13436  -0.05925  -999 -999 -999 -999 -999 -999 -999
+    27.500  75726976 0.41124  2.23844  -0.04737  -999 -999 -999 -999 -999 -999 -999
+    30.000  75726976 0.44628  2.30477  -0.02885  -999 -999 -999 -999 -999 -999 -999
+    32.500  75726976 0.47981  2.33197  -0.00527  -999 -999 -999 -999 -999 -999 -999
+    35.000  75726976 0.54176  2.16782  -0.00856  -999 -999 -999 -999 -999 -999 -999
+ZONE T="033 TC1, Embraer GRID 1" 
+    10.000  60989187 0.15158  1.23655  -0.11034  -999 -999 -999 -999 -999 -999 -999
+    15.000  60989187 0.21194  1.54989  -0.08244  -999 -999 -999 -999 -999 -999 -999
+    20.000  60989187 0.28849  1.85502  -0.07007  -999 -999 -999 -999 -999 -999 -999
+    25.000  60989187 0.36990  2.11416  -0.05597  -999 -999 -999 -999 -999 -999 -999
+    27.500  60989187 0.40814  2.20121  -0.04311  -999 -999 -999 -999 -999 -999 -999
+    30.000  60989187 0.45293  2.00379  -0.00105  -999 -999 -999 -999 -999 -999 -999
+    32.500  60989187 0.50774  2.05485   0.03654  -999 -999 -999 -999 -999 -999 -999
+    35.000  60989187 0.61196  1.75565   0.11578  -999 -999 -999 -999 -999 -999 -999
