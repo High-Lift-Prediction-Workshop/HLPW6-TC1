@@ -1,0 +1,684 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+#   HLPW-6 Surface Pressure & Skin Friction Distribution DATA SUBMITTAL FORM for Test Case 1, March 3rd 2026, RevNew
+#   Author: DJH, adapted from HLPW-5 submission files
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#            X, Y, Z:   Coordinates of each computational point on the pressure cut in inches
+#                 CP:   Coefficient of pressure - give mean if not converged to steady-state
+#                 CF:   Skin-friction coefficient at wall = tau_w/(freestream dynamic pressure) 
+#                                               - give mean if not converged to steady-state
+#      CFX, CFY, CFZ:   Components of skin-friction coefficient at wall
+#                                               - give mean if not converged to steady-state
+#
+#              ALPHA:   Angle of attack, deg.
+#                MAC:   Mean aerodynamic chord = 30 inches
+#                MRC:   x = 34.8082 inches, y = 0.0 inches, z = 0 inches
+#
+#                XXX:   Participant ID (assigned by HLPW committee); e.g., 001, 020, 147
+#                TFG:   TFG the submission should fall under (e.g. R, S, A, H)
+#            DATASET:   Sequential number, should start at 01 for each participant and TFG
+#
+#    E.g. TITLE field could be: 001_TC1_S_20 for the 20th submission by participant 1 to the scale resolving TFG
+#
+#             Nomenclature for pressure bands:
+#             W:      Indicates plane on the wing (along chordwise rows WA to WG, spanwise row WSA-WSF)
+#             S:      Indicates cut on slat element (along chordwise rows SA to SG)
+#             Flap:   Indicates cut on flap element (along chordwise rows FA to FC, spanwise row FSF)
+#
+#            The cut locations for CRM-HLS are defined on <insert website location here>
+#
+#    FLOW CONDITIONS:
+#            Angles of Attack: 10, 15, 20, 25, 30, 35 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 3.55 million (based on MAC)
+#             Freestream Temp: 518.67 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CP, CF, etc.
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of everything
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+TITLE = "XXX_TC1_TFG_DATASET"
+
+#                            <----- Optional ----->
+VARIABLES = "X" "Y" "Z" "CP" "CF" "CFX" "CFY" "CFZ"
+
+# the following lines need the quotes, modify string to numeric value within quotes
+DATASETAUXDATA N_NUMBEROFUNKNOWNS_AOA_10p0  = "insert your gridsize N for AoA=10 case here"
+DATASETAUXDATA N_NUMBEROFUNKNOWNS_AOA_15p0  = "insert your gridsize N for AoA=15 case here"
+DATASETAUXDATA N_NUMBEROFUNKNOWNS_AOA_20p0  = "insert your gridsize N for AoA=20 case here"
+DATASETAUXDATA N_NUMBEROFUNKNOWNS_AOA_25p0  = "insert your gridsize N for AoA=25 case here"
+DATASETAUXDATA N_NUMBEROFUNKNOWNS_AOA_30p0  = "insert your gridsize N for AoA=30 case here"
+DATASETAUXDATA N_NUMBEROFUNKNOWNS_AOA_35p0  = "insert your gridsize N for AoA=35 case here"
+
+# The following section is for AoA=10 deg:
+# Chordwise rows:
+# Row A
+ZONE T="XXX TC1 Row SA, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WA, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FA, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row B
+ZONE T="XXX TC1 Row SB, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WB, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FB, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row C
+ZONE T="XXX TC1 Row SC, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WC, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FC, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row D
+ZONE T="XXX TC1 Row SD, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WD, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row E
+ZONE T="XXX TC1 Row SE, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WE, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row F
+ZONE T="XXX TC1 Row SF, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WF, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row G
+ZONE T="XXX TC1 Row SG, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WG, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Spanwise rows:
+#Row SA
+ZONE T="XXX TC1 Row WSA, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+#Row SB
+ZONE T="XXX TC1 Row WSB, wing, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SC
+ZONE T="XXX TC1 Row WSC, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SD
+ZONE T="XXX TC1 Row WSD, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SE
+ZONE T="XXX TC1 Row WSE, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SF
+ZONE T="XXX TC1 Row WSF, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row FSF, <greek>a<\greek> = 10<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+# The following section is for AoA=15 deg:
+# Chordwise rows:
+# Row A
+ZONE T="XXX TC1 Row SA, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WA, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FA, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row B
+ZONE T="XXX TC1 Row SB, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WB, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FB, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row C
+ZONE T="XXX TC1 Row SC, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WC, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FC, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row D
+ZONE T="XXX TC1 Row SD, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WD, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row E
+ZONE T="XXX TC1 Row SE, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WE, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row F
+ZONE T="XXX TC1 Row SF, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WF, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row G
+ZONE T="XXX TC1 Row SG, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WG, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Spanwise rows:
+#Row SA
+ZONE T="XXX TC1 Row WSA, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+#Row SB
+ZONE T="XXX TC1 Row WSB, wing, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SC
+ZONE T="XXX TC1 Row WSC, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SD
+ZONE T="XXX TC1 Row WSD, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SE
+ZONE T="XXX TC1 Row WSE, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SF
+ZONE T="XXX TC1 Row WSF, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row FSF, <greek>a<\greek> = 15<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+# The following section is for AoA=20 deg:
+# Chordwise rows:
+# Row A
+ZONE T="XXX TC1 Row SA, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WA, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FA, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row B
+ZONE T="XXX TC1 Row SB, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WB, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FB, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row C
+ZONE T="XXX TC1 Row SC, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WC, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FC, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row D
+ZONE T="XXX TC1 Row SD, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WD, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row E
+ZONE T="XXX TC1 Row SE, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WE, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row F
+ZONE T="XXX TC1 Row SF, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WF, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row G
+ZONE T="XXX TC1 Row SG, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WG, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Spanwise rows:
+#Row SA
+ZONE T="XXX TC1 Row WSA, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+#Row SB
+ZONE T="XXX TC1 Row WSB, wing, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SC
+ZONE T="XXX TC1 Row WSC, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SD
+ZONE T="XXX TC1 Row WSD, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SE
+ZONE T="XXX TC1 Row WSE, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SF
+ZONE T="XXX TC1 Row WSF, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row FSF, <greek>a<\greek> = 20<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+# The following section is for AoA=25 deg:
+# Chordwise rows:
+# Row A
+ZONE T="XXX TC1 Row SA, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WA, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FA, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row B
+ZONE T="XXX TC1 Row SB, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WB, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FB, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row C
+ZONE T="XXX TC1 Row SC, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WC, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FC, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row D
+ZONE T="XXX TC1 Row SD, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WD, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row E
+ZONE T="XXX TC1 Row SE, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WE, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row F
+ZONE T="XXX TC1 Row SF, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WF, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row G
+ZONE T="XXX TC1 Row SG, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WG, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Spanwise rows:
+#Row SA
+ZONE T="XXX TC1 Row WSA, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+#Row SB
+ZONE T="XXX TC1 Row WSB, wing, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SC
+ZONE T="XXX TC1 Row WSC, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SD
+ZONE T="XXX TC1 Row WSD, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SE
+ZONE T="XXX TC1 Row WSE, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SF
+ZONE T="XXX TC1 Row WSF, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row FSF, <greek>a<\greek> = 25<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+# The following section is for AoA=30 deg:
+# Chordwise rows:
+# Row A
+ZONE T="XXX TC1 Row SA, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WA, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FA, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row B
+ZONE T="XXX TC1 Row SB, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WB, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FB, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row C
+ZONE T="XXX TC1 Row SC, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WC, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FC, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row D
+ZONE T="XXX TC1 Row SD, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WD, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row E
+ZONE T="XXX TC1 Row SE, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WE, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row F
+ZONE T="XXX TC1 Row SF, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WF, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row G
+ZONE T="XXX TC1 Row SG, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WG, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Spanwise rows:
+#Row SA
+ZONE T="XXX TC1 Row WSA, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+#Row SB
+ZONE T="XXX TC1 Row WSB, wing, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SC
+ZONE T="XXX TC1 Row WSC, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SD
+ZONE T="XXX TC1 Row WSD, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SE
+ZONE T="XXX TC1 Row WSE, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SF
+ZONE T="XXX TC1 Row WSF, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row FSF, <greek>a<\greek> = 30<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+# The following section is for AoA=35 deg:
+# Chordwise rows:
+# Row A
+ZONE T="XXX TC1 Row SA, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WA, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FA, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row B
+ZONE T="XXX TC1 Row SB, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WB, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FB, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row C
+ZONE T="XXX TC1 Row SC, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WC, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row FC, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row D
+ZONE T="XXX TC1 Row SD, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+ZONE T="XXX TC1 Row WD, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row E
+ZONE T="XXX TC1 Row SE, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WE, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row F
+ZONE T="XXX TC1 Row SF, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WF, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row G
+ZONE T="XXX TC1 Row SG, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row WG, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Spanwise rows:
+#Row SA
+ZONE T="XXX TC1 Row WSA, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+#Row SB
+ZONE T="XXX TC1 Row WSB, wing, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SC
+ZONE T="XXX TC1 Row WSC, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SD
+ZONE T="XXX TC1 Row WSD, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SE
+ZONE T="XXX TC1 Row WSE, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+#Row SF
+ZONE T="XXX TC1 Row WSF, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+ZONE T="XXX TC1 Row FSF, <greek>a<\greek> = 35<math>0<\math>"
+ -999 -999 -999   -999   -999 -999 -999 -999
+# etc..
+
+
+
