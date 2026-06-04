@@ -11,3 +11,9 @@ Where:
    - **H** = High Order TFG  
    - **A** = Artificial Intelligent (AI) TFG  
 - **DATASET** = Preliminary submission number, these should run sequentially from 01  
+
+# Submission Key
+
+011_TC1_S_01 -- BFM-v1 Level, 11 Grid
+
+011_TC1_S_02 -- Vreman+EQWM, Level 11 Grid
