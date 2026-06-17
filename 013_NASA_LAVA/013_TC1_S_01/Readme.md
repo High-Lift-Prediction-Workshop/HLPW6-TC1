@@ -1,8 +1,12 @@
 # High Lift Prediction Workshop 6 - LAVA Cartesian Participant ID-013
 
-This folder contains four files participants are expected to modify and submit for Test Case 1:
+This folder contains the following files submitted for Test Case 1:
 
-1. **FM.dat** = Converged or time-averaged Force and Moment data vs. angle of attack
+1. **FM.dat** = Time-averaged Force and Moment data vs. angle of attack (multiple grid levels included).
+2. **gridconvergence_FM.dat** = Time-averaged Force and Moment data vs. grid level (transpose of #1).
+3. **nominalgrid_cpcf.dat** = Surface pressure and skin-friction distributions along the experimental pressure rows (Tecplot ASCII; 24 rows x 11 angles of attack). Row locations are defined [here](https://aiaa-hlpw.org/assets/HLPW6/tc1/TC1_Pressure_Rows.xlsx).
+4. **FlowVis/** = Upper-surface skin-friction (Cf) contours and surface skin-friction streamlines for the requested views and angles of attack.
+5. **HLPW6_LAVA_CART_ALPHA35_1080p.mp4** = Solution animation for the alpha = 35 deg case.
 
 Additionally, participants should revise the Readme.md (this file) within their submission directory to include the following data:
 
@@ -49,6 +53,7 @@ Here is an overview of solver capabilities used:
 Constant coefficient Vreman subgrid scale model for LES closure
 
 ## Transition Method:
+No transition model is used. A turbulence-sensor-based wall model switches between laminar (no-slip) and a blended-log wall-stress model based on the resolved turbulence kinetic energy at the first cell center off the wall (Sozer et al. 2025, SciTech).
 
 ## Convergence Criteria:
 N/A
@@ -72,12 +77,13 @@ ANSA (v22.1) for closed surface triangulation
 Block-structured Octree AMR
 
 ## Number of Total Nodes:  
+N/A (cell-centered finite-volume formulation; see total cell count below)
 
 ## Number of Total Cells:
-742million, but time-varying
+Approximately 495-742 million at Level 11. The mesh is time-varying due to on-the-fly adaptive mesh refinement (the cell count grows with angle of attack); the per-angle-of-attack cell count is reported in the N column of FM.dat.
 
 ## Miscellaneous:  
-Insert any other information about the grids or solution procedure(s) used for Case 2.1 here
+The initial mesh is generated automatically from user-defined surface zones with target cell sizes, then adapted on the fly using a small-scale energy error metric (regridding every 10000 steps). Solution coordinates are in meters; the submitted surface distributions (nominalgrid_cpcf.dat) are converted to inches.
 
 # "TYPICAL" SOLUTION PERFORMANCE INFORMATION 
 ## Grid size:
