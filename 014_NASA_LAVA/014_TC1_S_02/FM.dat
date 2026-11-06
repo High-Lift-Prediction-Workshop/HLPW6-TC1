@@ -1,0 +1,61 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#   HLPW-6 Force/Moment vs. Alpha DATA SUBMITTAL FORM for Test Case 1, March 3rd 2026, RevNew
+#   Author: DJH, adapted from HLPW-5 submission files
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#        The next four variables are optional, dependent on solver capability to output
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 30 inches
+#                MRC:   x = 34.8082 inches, y = 0.0 inches, z = 0 inches
+#
+#                XXX:   Participant ID (assigned by HLPW committee); e.g., 001, 020, 147
+#                TFG:   TFG the submission should fall under (e.g. R, S, A, H)
+#            DATASET:   Sequential number, should start at 01 for each participant and TFG
+
+#    E.g. TITLE field could be: 001_TC1_S_20 for the 20th submission by participant 1 to the scale resolving TFG
+#
+#    FLOW CONDITIONS:
+#            Angles of Attack: 10, 15, 20, 25, 30, 35 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 3.55 million (based on MAC)
+#             Freestream Temp: 518.67 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "014_TC1_S_02"
+#                                                           <----- Optional ----->
+VARIABLES = "ALPHA" "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
+
+ZONE T="014 TC1, NOMINAL LAVA Unstructured, Level 11 Voronoi Grid"
+  10.0  229513185   1.27593378e+00 1.56029978e-01 -1.23454150e-01   4.74867371e-05 2.01224657e+01 5.08774520e+01   1.27625323e+00 -3.19450651e-04 1.49237887e-01 6.79209127e-03
+  15.0  229513185   1.59405281e+00 2.18762028e-01 -9.90649866e-02   4.69494581e-05 2.74387642e+01 4.25611686e+01   1.59475952e+00 -7.06711595e-04 2.11781142e-01 6.98088573e-03
+  20.0  229513185   1.89774197e+00 2.94344988e-01 -8.29163149e-02   4.58447356e-05 2.34838048e+01 4.27161771e+01   1.89883340e+00 -1.09142647e-03 2.87372227e-01 6.97276066e-03
+  25.0  229513185   2.18112467e+00 3.77693643e-01 -6.49242046e-02   4.40445975e-05 3.20681629e+01 4.70318024e+01   2.18263144e+00 -1.50677140e-03 3.70766361e-01 6.92728237e-03
+  30.0  229513185   2.38451383e+00 4.54731281e-01 -2.90843555e-02   4.03131764e-05 2.09217347e+01 5.07781382e+01   2.38616183e+00 -1.64799965e-03 4.48033667e-01 6.69761396e-03
+  33.0  229513185   2.43992868e+00 4.91210994e-01 7.13117766e-03   3.85372682e-05 2.87254757e+01 3.62761815e+01   2.44155431e+00 -1.62562804e-03 4.84861680e-01 6.34931373e-03
+  34.0  229513185   2.42816788e+00 4.99537562e-01 2.40304062e-02   3.81133342e-05 2.48490131e+01 2.91506659e+01   2.42974840e+00 -1.58052546e-03 4.93364241e-01 6.17332089e-03
+  35.0  229513185   2.41667547e+00 5.13636011e-01 3.36186445e-02   3.77227634e-05 2.80717325e+01 6.39279940e+01   2.41821360e+00 -1.53812378e-03 5.07686225e-01 5.94978551e-03
+  36.0  229513185   2.34851161e+00 5.31933483e-01 3.81333300e-02   3.76991814e-05 4.65525222e+01 7.34472834e+01   2.35000896e+00 -1.49735676e-03 5.26332486e-01 5.60099663e-03
+  37.0  229513185   2.13641049e+00 5.97948257e-01 3.58385184e-02   3.86948807e-05 2.27924400e+01 9.72094913e+01   2.13801147e+00 -1.60097591e-03 5.92984919e-01 4.96333821e-03
+  38.0  229513185   2.09848346e+00 6.39088622e-01 3.19504154e-02   3.84470411e-05 1.60154368e+01 1.03986220e+02   2.10009152e+00 -1.60806447e-03 6.34408690e-01 4.67993193e-03
+
