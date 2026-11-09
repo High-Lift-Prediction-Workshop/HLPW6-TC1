@@ -42,7 +42,7 @@
 #
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-TITLE = "022_TC1_TFG_DATASET"
+TITLE = "022_TC1_R_01"
 #                                                           <----- Optional ----->
 VARIABLES = "ALPHA" "N" "CL" "CD" "CM" 
 
@@ -50,8 +50,8 @@ VARIABLES = "ALPHA" "N" "CL" "CD" "CM"
 # changing, e.g., "NAMED GRID 1" to a description of the grid used (such as "GRID 2.R.02 R LEVEL")
 # and include the word NOMINAL next to the result you feel is "best")
 
-ZONE T="022 TC1, ADAPTIVE GRID"
- 10.0  4300625 40277431 1.2428104366 0.1553950642 -0.1115270794
+ZONE T="022_TC1_R_01, ADAPTIVE_GRID_NOMINAL"
+ 10.0 40277431 1.2428104366 0.1553950642 -0.1115270794
  20.0 40397673 1.8624057697 0.2914228903 -0.0693903336
  25.0 40294386 1.9149543695 0.3886880328 -0.0080357981
 
