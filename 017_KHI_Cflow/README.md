@@ -10,3 +10,10 @@ Dataset: FM, gridconvergence_FM, FlowViz (B,C,D,E)(\*)
 ## 017_TC1_R_02
 Date: 2026/5/26  
 Note: FlowViz/View6 images have been added. (Only updated files are included.)  
+
+## 017_TC1_R_03 
+Date: 2026/11/17 
+Note: Level-E results have been updated. 
+      Dataset for Mini-workshop 2. 
+Dataset: All (FM, gridconvergence_FM, FlowViz, CpCf, Iterative) 
+Misc.: Anomalous Cp values are observed around the stagnation point at AoAs above 25 degrees. The cause is under investigation. 
