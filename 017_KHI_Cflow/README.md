@@ -13,5 +13,6 @@ Note: FlowViz/View6 images have been added. (Only updated files are included.)
 
 ## 017_TC1_R_03 
 Date: 2026/11/17  
-Note: Dataset for Mini-workshop 2. Level-E (Nominal grid) results have been updated. Level-B/C/D results are the same as the previous version.  
+Note: Dataset for Mini-workshop 2. Level-E results have been updated. Level-B/C/D results are the same as the previous version.  
 Dataset: FM, gridconvergence_FM, FlowViz, Iterative  
+Nominal grid: Level-E  
