@@ -1,0 +1,61 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#   HLPW-6 Force/Moment vs. Alpha DATA SUBMITTAL FORM for Test Case 1, March 3rd 2026, RevNew
+#   Author: DJH, adapted from HLPW-5 submission files
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#        The next four variables are optional, dependent on solver capability to output
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 30 inches
+#                MRC:   x = 34.8082 inches, y = 0.0 inches, z = 0 inches
+#
+#                XXX:   Participant ID (assigned by HLPW committee); e.g., 001, 020, 147
+#                TFG:   TFG the submission should fall under (e.g. R, S, A, H)
+#            DATASET:   Sequential number, should start at 01 for each participant and TFG
+
+#    E.g. TITLE field could be: 001_TC1_S_20 for the 20th submission by participant 1 to the scale resolving TFG
+#
+#    FLOW CONDITIONS:
+#            Angles of Attack: 10, 15, 20, 25, 30, 35 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 3.55 million (based on MAC)
+#             Freestream Temp: 518.67 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "019_TC1_R_04"
+#                                                           <----- Optional ----->
+VARIABLES = "ALPHA" "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
+
+ZONE T="019 TC1, CODA adapted mesh R04, sorted by AoA (last entry per AoA per branch)"
+ 20	7744742	1.68381145802566	0.310161657889814	-0.0314657011221492	-1 -999 -999   -999 -999 0.301681211862746 0.00848044602706745
+ 25	7144263	1.91563533080308	0.389618549215909	-0.00831276073329621	-1 -999 -999   -999 -999 0.381198611491393 0.00841993772451609
+ 26	7442436	1.95474627129288	0.405721289609987	-0.00359240674523518	-1 -999 -999   -999 -999 0.397367442570438 0.00835384703954846
+ 27	7812571	1.99867718106853	0.420921514111501	-0.000338820382310098	-1 -999 -999   -999 -999 0.412657200127815 0.00826431398368647
+ 28	7451422	2.0312388534882	0.437605257523104	0.00473817884181342	-1 -999 -999   -999 -999 0.429423037969289 0.00818221955381447
+ 29	7138935	2.06337340984759	0.454386214721934	0.0093593857464656	-1 -999 -999   -999 -999 0.446306136359141 0.00808007836279378
+ 30	7048632	2.09684615937314	0.471244998223933	0.0127861843180148	-1 -999 -999   -999 -999 0.463279679941615 0.00796531828231785
+ 31	7003144	2.12826378520304	0.487729952757362	0.0167731086074961	-1 -999 -999   -999 -999 0.479914556672966 0.00781539608439607
+ 32	7044020	2.15788370666316	0.504797124235214	0.0197665572603202	-1 -999 -999   -999 -999 0.497119536646613 0.00767758758860052
+ 34	7055291	2.21037599570589	0.53791007483681	0.0270804083161462	-1 -999 -999   -999 -999 0.530710835986614 0.00719923885019598
+ 35	7291690	2.22801170562048	0.553402012934501	0.033836737746247	-1 -999 -999   -999 -999 0.54649533326339 0.00690667967111059
+ 36	7810220	1.7708397387124	0.629735025023915	0.110225705918364	-1 -999 -999   -999 -999 0.62413589258066 0.0055991324432542
