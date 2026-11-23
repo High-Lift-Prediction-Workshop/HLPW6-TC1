@@ -1,0 +1,71 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#   HLPW-6 Force/Moment vs. Alpha DATA SUBMITTAL FORM for Test Case 1, March 3rd 2026, RevNew
+#   Author: DJH, adapted from HLPW-5 submission files
+#
+#       NOMENCLATURE:
+#                  N:   Number of unknowns (grid points for node-centered code, grid cells for cell-centered code)
+#                 CL:	Coefficient of lift (total)
+#                 CD:	Coefficient of drag (total)
+#                 CM:	Coefficient of pitching moment (CMy) about moment reference center (MRC) (total)
+#                 DT:   nondimensional time step if run time-accurately (dt*U_freestream/MAC);
+#                         enter -1 if run in steady-state mode (non-time-accurately)
+#             TSTART:   if run time-accurately and averaged in time, this is the starting time when time-averaging
+#                       began = (time after run initiation)*U_freestream/MAC
+#               TAVG:   if run time-accurately and averaged in time, this is the averaging time =
+#                       (averaging time)*U_freestream/MAC
+#        The next four variables are optional, dependent on solver capability to output
+#                CLp:   pressure component of lift coefficient
+#                CLv:   viscous component of lift coefficient
+#                CDp:   pressure component of drag coefficient
+#                CDv:   viscous component of drag coefficient
+#
+#                MAC:   Mean aerodynamic chord = 30 inches
+#                MRC:   x = 34.8082 inches, y = 0.0 inches, z = 0 inches
+#
+#                005:   Participant ID (assigned by HLPW committee); e.g., 001, 020, 147
+#                TFG:   TFG the submission should fall under (e.g. R, S, A, H)
+#            DATASET:   Sequential number, should start at 01 for each participant and TFG
+
+#    E.g. TITLE field could be: 001_TC1_S_20 for the 20th submission by participant 1 to the scale resolving TFG
+#
+#    FLOW CONDITIONS:
+#            Angles of Attack: 10, 15, 20, 25, 30, 35 deg
+#                 Mach Number: 0.20
+#             Reynolds Number: 3.55 million (based on MAC)
+#             Freestream Temp: 518.67 R
+#
+#              NOTES: 1. All numerical data fields can be free-formatted
+#                     2. Please use at least 5 decimal places in the numerical values for CL CD CM
+#                     3. If data are NOT provided, please fill data fields with a numerical value of "-999" 
+#                     4. If not converged to steady-state (i.e., if run with a scale-resolving simulation
+#                        or run time-accurately), give mean values of CL, CD, and CM
+#
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TITLE = "005_TC1_S_02"
+#                                                           <----- Optional ----->
+VARIABLES = "ALPHA" "N" "CL" "CD" "CM" "DT" "TSTART" "TAVG" "CLp" "CLv" "CDp" "CDv"
+
+# Include one zone for each grid in the family that you are reporting (label them appropriately by
+# changing, e.g., "NAMED GRID 1" to a description of the grid used (such as "GRID 2.R.02 R LEVEL")
+# and include the word NOMINAL next to the result you feel is "best")
+
+ZONE T="005 TC1 HeldenMesh_D301_Coarse"
+ 10.0    126118022     1.210348     0.1464049   -0.1020053     -999   -999   -999   -999   -999     0.13841682   0.0079880795
+ 25.0    126118022     2.096855     0.3638647   -0.0505841     -999   -999   -999   -999   -999     0.35513836   0.0087263389
+ 28.0    126118022     2.213118     0.4105889   -0.0380362     -999   -999   -999   -999   -999     0.40220089   0.0083880145
+ 30.0    126118022     2.280499     0.4419463   -0.0284575     -999   -999   -999   -999   -999     0.43385831   0.0080879889
+ 32.0    126118022     2.331431     0.4701247   -0.0100503     -999   -999   -999   -999   -999     0.46243779   0.0076869056
+ 35.0    126118022     1.554263     0.6602190    0.0523824     -999   -999   -999   -999   -999     0.65649395   0.0037250516
+ZONE T="005 TC1 HeldenMesh_D301_Medium"
+ 10.0    199996903     1.212423     0.1469842   -0.1027884     -999   -999   -999   -999   -999     0.1390128    7.9713501E-03
+ 20.0    199996903     1.832543     0.2822132   -6.1088577E-02 -999   -999   -999   -999   -999     0.2734145    8.7986914E-03
+ 25.0    199996903     2.106129     0.3660348   -5.1871814E-02 -999   -999   -999   -999   -999     0.3573096    8.7252203E-03
+ 30.0    199996903     2.297373     0.4459117   -3.4764394E-02 -999   -999   -999   -999   -999     0.4377652    8.1464695E-03   
+ 32.0    199996903     2.347002     0.4739460   -1.7481413E-02 -999   -999   -999   -999   -999     0.4662419    7.7041183E-03
+ 33.0    199996903     2.363327     0.4884917   -9.7198775E-03 -999   -999   -999   -999   -999     0.4810545    7.4371998E-03
+ 34.0    199996903     1.722353     0.6347868    7.4187085E-02 -999   -999   -999   -999   -999     0.6306315    4.1553336E-03
+ZONE T="005 TC1 HeldenMesh_D301_Fine"
+ 10.0    351432572     1.210951     0.1471966   -0.1011947     -999   -999   -999   -999   -999     0.13922253   0.0079740714
+ 30.0    351432572     2.290674     0.4444870   -0.0355077     -999   -999   -999   -999   -999     0.43644909   0.0080379108
+
